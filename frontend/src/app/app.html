@@ -3,7 +3,7 @@
   <!-- Nueva sintaxis directa de Angular para condicionales -->
   @if (authService.isLoggedIn()) {
     <header style="background: #1e293b; color: white; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center;">
-      <h1 style="margin: 0; font-size: 20px;">🛒 Supermercado - Sistema de Gestión</h1>
+      <h1 class="titulo-destacado">🛒 Sistema Supermercado - Módulo v2.0</h1>
       <div style="display: flex; align-items: center; gap: 15px;">
         <span style="font-size: 14px; background: #334155; padding: 5px 12px; border-radius: 20px;">
           Usuario: {{ authService.usuarioActual() }}
@@ -27,6 +27,13 @@
 
   <!-- Contenido de las rutas -->
   <main [style.padding]="authService.isLoggedIn() ? '20px' : '0'">
+    @if (authService.isLoggedIn()) {
+      <section class="tarjeta-promocional">
+        <h3>🔥 Promoción del Día</h3>
+        <p>Aprovecha un 15% de descuento en productos seleccionados.</p>
+        <button type="button" class="boton-accion">Ver Descuentos</button>
+      </section>
+    }
     <router-outlet></router-outlet>
   </main>
 </div>

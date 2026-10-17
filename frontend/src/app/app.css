@@ -1,3 +1,39 @@
+.titulo-destacado {
+  margin: 0;
+  font-size: 20px;
+}
+
+.tarjeta-promocional {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  background: #fff7ed;
+  color: #7c2d12;
+}
+
+.tarjeta-promocional h3 {
+  margin: 0 0 8px;
+}
+
+.tarjeta-promocional p {
+  margin: 0 0 16px;
+}
+
+.boton-accion {
+  padding: 9px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #ea580c;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-accion:hover {
+  background: #c2410c;
+}
+
 .nav-btn {
   color: #94a3b8;
   text-decoration: none;
@@ -17,3 +53,4 @@
   background-color: #2563eb !important;
   color: #ffffff !important;
 }
+
