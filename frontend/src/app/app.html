@@ -1,0 +1,32 @@
+<div style="font-family: Arial, sans-serif; min-height: 100vh; background-color: #f4f6f9;">
+
+  <!-- Nueva sintaxis directa de Angular para condicionales -->
+  @if (authService.isLoggedIn()) {
+    <header style="background: #1e293b; color: white; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center;">
+      <h1 style="margin: 0; font-size: 20px;">🛒 Supermercado - Sistema de Gestión</h1>
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <span style="font-size: 14px; background: #334155; padding: 5px 12px; border-radius: 20px;">
+          Usuario: {{ authService.usuarioActual() }}
+        </span>
+        <button (click)="authService.logout()" style="background: #ef4444; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-weight: bold; cursor: pointer;">
+          🚪 Salir
+        </button>
+      </div>
+    </header>
+
+    <nav style="background: #0f172a; padding: 10px 25px; display: flex; gap: 10px;">
+      <a routerLink="/dashboard" routerLinkActive="btn-activo" class="nav-btn">📊 Dashboard</a>
+      <a routerLink="/productos" routerLinkActive="btn-activo" class="nav-btn">📦 Productos</a>
+      <a routerLink="/categorias" routerLinkActive="btn-activo" class="nav-btn">🏷️ Categorías</a>
+      <a routerLink="/clientes" routerLinkActive="btn-activo" class="nav-btn">👥 Clientes</a>
+      <a routerLink="/proveedores" routerLinkActive="btn-activo" class="nav-btn">🚛 Proveedores</a>
+      <a routerLink="/compras" routerLinkActive="btn-activo" class="nav-btn">📥 Compras</a>
+      <a routerLink="/ventas" routerLinkActive="btn-activo" class="nav-btn">💳 Ventas</a>
+    </nav>
+  }
+
+  <!-- Contenido de las rutas -->
+  <main [style.padding]="authService.isLoggedIn() ? '20px' : '0'">
+    <router-outlet></router-outlet>
+  </main>
+</div>

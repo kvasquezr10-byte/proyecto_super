@@ -1,0 +1,19 @@
+.nav-btn {
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-btn:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.btn-activo {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
